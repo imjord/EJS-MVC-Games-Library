@@ -5,16 +5,18 @@ const db = require('./config/connection');
 require('dotenv').config();
 
 
+// routes
+const homeRoute = require('./routes/homeRoute');
+
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // set view engine 
 app.set('view engine', "ejs");
+app.use(express.static('./public'));
 
-
-app.get('/', (req,res) =>{
-    res.render('home', {title: 'Homepage'})
-})
+app.use('/', homeRoute);
 
 
 db.once('open', () => {
