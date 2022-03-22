@@ -13,8 +13,8 @@ const getGenre =  (req,res) => {
         body: 'fields *;'
     }).then(response => response.json())
     .then(data => {
-      console.log(data)
-      res.render('catagories', {title: 'catagories', categorys: data})
+      console.log(data[0].name)
+      res.render('catagories', {title: 'catagories', category: data[0].name})
     })
     .catch(err => console.log(err.message))
 
