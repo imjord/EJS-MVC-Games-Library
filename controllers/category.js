@@ -14,7 +14,7 @@ const getGenre =  (req,res) => {
     }).then(response => response.json())
     .then(data => {
       console.log(data[0].name)
-      res.render('catagories', {title: 'catagories', category: data[0].name})
+      res.render('catagories', {title: 'catagories', category: data})
     })
     .catch(err => console.log(err.message))
 

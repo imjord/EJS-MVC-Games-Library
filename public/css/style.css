@@ -25,12 +25,32 @@ background-size: cover;
     margin-top: 40px;
 }
 
+.title-category {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+    color: white;
+}
+
 .catagories {
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 80px;
+}
+
+.category-list {
+    display: flex;
+   
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#name-list {
+    text-decoration: none;
 }
 
 #list {
@@ -48,9 +68,27 @@ background-size: cover;
 .head-container {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     width: auto;
     padding: 20px 40px;
     box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.9);
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    color: blue;
+}
+
+#home-link {
+    text-decoration: none;
+    color: blue;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}

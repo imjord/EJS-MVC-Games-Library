@@ -1,8 +1,22 @@
 <%- include('./partials/Header.ejs') %> 
+<div class="title-category">
+    <h3>Pick a category</h3>
+</div>
 <div class="catagories">
-    <h3>Pick a game catagorie</h3>
-
-    <%= category  %> 
+    
+    <div class="category-list">
+        <ul class="name-container">
+            <% category.forEach(names => { %> 
+        
+            
+                <li id="name-list">     <%= names.name %> </li>
+           
+            <% }) %> 
+        </ul>
+        
+    </div>
+    
+    
 </div>
 
 
