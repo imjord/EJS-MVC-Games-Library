@@ -25,6 +25,14 @@ background-size: cover;
     margin-top: 40px;
 }
 
+.catagories {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
 #list {
     text-decoration: none;
     color: white;
