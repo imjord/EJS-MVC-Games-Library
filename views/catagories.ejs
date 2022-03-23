@@ -9,7 +9,7 @@
             <% category.forEach(names => { %> 
         
             
-                <li id="name-list">     <%= names.name %> </li>
+                <a href=<%=`${names.name}`  %> ><li id="name-list">     <%= names.name %> </li></a>
            
             <% }) %> 
         </ul>
@@ -18,5 +18,6 @@
     
     
 </div>
+
 
 

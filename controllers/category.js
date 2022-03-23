@@ -20,5 +20,5 @@ const getGenre =  (req,res) => {
 
    
 }
-
+// once click on a catagory make it go to a new route that posts that category games
 module.exports = {getGenre}
