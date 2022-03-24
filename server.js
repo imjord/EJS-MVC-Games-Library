@@ -9,6 +9,7 @@ require('dotenv').config();
 const homeRoute = require('./routes/homeRoute');
 const libraryRoute = require('./routes/LibraryRoute');
 const catagoryRoute = require('./routes/catagoryRoute');
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -19,6 +20,7 @@ app.use(express.static('./public'));
 app.use('/', homeRoute);
 app.use('/library', libraryRoute);
 app.use('/catagories', catagoryRoute);
+
 
 db.once('open', () => {
     console.log('database live')
