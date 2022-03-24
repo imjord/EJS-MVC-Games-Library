@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 
-const getPuzzle = (req,res) => {
+
+
+const getRts = (req,res) => {
     const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
@@ -8,12 +10,11 @@ const getPuzzle = (req,res) => {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres, name, artworks.url; where genres = (9);'
+        body: 'fields genres, name, artworks.url; where genres = (11);'
     }).then(response => response.json())
     .then(data => {
-        data.toSt
       console.log(data)
-      res.render('puzzle', {title: 'puzzle', games: data})
+      res.render('rts', {title: 'rts', games: data})
     })
     .catch(err => console.log(err.message))
 
@@ -21,5 +22,4 @@ const getPuzzle = (req,res) => {
 }
 
 
-// once click on a catagory make it go to a new route that posts that category games
-module.exports = {getPuzzle};
+module.exports = {getRts};

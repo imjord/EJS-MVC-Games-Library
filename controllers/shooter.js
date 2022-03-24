@@ -8,7 +8,7 @@ const getShooter = (req,res) => {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres; where genres = (5);'
+        body: 'fields genres, name, artworks.url; where genres = (5);'
     }).then(response => response.json())
     .then(data => {
       console.log(data)

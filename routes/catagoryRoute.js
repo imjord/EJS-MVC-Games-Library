@@ -35,6 +35,7 @@ const {
     getRpg
 } = require('../controllers/rpg');
 const { getSport } = require('../controllers/sport');
+const { getRts } = require('../controllers/rts');
 
 
 router.get('/', getGenre);
@@ -47,7 +48,7 @@ router.get('/role-playing-rpg', getRpg);
 router.get('/simulator', getSim);
 router.get('/sport', getSport);
 router.get('/music', getMusic);
-
+router.get('/rts', getRts)
 
 
 

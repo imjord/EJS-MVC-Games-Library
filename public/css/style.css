@@ -92,3 +92,11 @@ background-size: cover;
     justify-content: flex-end;
     margin-left: auto;
 }
+
+.games-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+}
