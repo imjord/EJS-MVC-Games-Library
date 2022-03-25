@@ -1,3 +1,4 @@
+const { json } = require('express/lib/response');
 const fetch = require('node-fetch');
 
 const getPuzzle = (req,res) => {
@@ -11,9 +12,9 @@ const getPuzzle = (req,res) => {
         body: 'fields genres, name, artworks.url; where genres = (9);'
     }).then(response => response.json())
     .then(data => {
-        data.toSt
-      console.log(data)
-      res.render('puzzle', {title: 'puzzle', games: data})
+        var datas = JSON.stringify(data)
+      console.log(JSON.stringify(datas))
+      res.render('puzzle', {title: 'puzzle', games: datas})
     })
     .catch(err => console.log(err.message))
 

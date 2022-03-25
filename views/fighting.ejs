@@ -1,4 +1,16 @@
 <%- include('./partials/Header.ejs') %> 
 <div class="games-list">
     Fighting Games
+    <ul>
+        <% games.forEach(gameData => { %> 
+            <li>
+              
+                <%= gameData.name %>
+                <%= gameData.genres %>  
+                <img src=<%=gameData.cover.url%>  alt="" />
+            </li>
+            
+            <% }) %> 
+    </ul>
+    
 </div>
