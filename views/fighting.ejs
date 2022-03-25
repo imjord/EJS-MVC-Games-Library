@@ -10,19 +10,15 @@
 
     <div class="genre-games-list">
         <ul>
-            <% if(gameData.cover.url === undefined) { %> 
-                <% return games.forEach(gameData => {  %> 
-                    <li>
+            <% games.forEach(gameData => { %> 
+                <li>
                   
-                        <%= gameData.name %>
-                        <img src=<%=gameData.cover.url%>  alt="" />
-                        
-                    </li>
+                    <%= gameData.name %>
+                    <img src=<%=gameData.cover.url%>  alt="" />
                     
-                    <% }) %> 
-                <% } %> 
-      
+                </li>
                 
+                <% }) %> 
         </ul>
     </div>
    

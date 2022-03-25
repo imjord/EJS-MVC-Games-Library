@@ -1,54 +1,25 @@
 const router = require('express').Router();
 const {
-    getGenre
+    getGenre, getFighting,
+    getMusic,
+    getPlatform, getPuzzle, getRacing, getRpg, getSport, getRts, getSim, getShooter
 } = require('../controllers/category');
 
 
-const {
-    getSim
-} = require('../controllers/simulator');
-
-const {
-    getMusic
-} = require('../controllers/music');
-
-const {
-    getFighting
-} = require('../controllers/fighting');
-const {
-    getPuzzle
-} = require('../controllers/puzzle');
-
-const {
-    getPlatform
-} = require('../controllers/platform');
-
-const {
-    getShooter
-} = require('../controllers/shooter');
-
-const {
-    getRacing
-} = require('../controllers/racing');
-
-const {
-    getRpg
-} = require('../controllers/rpg');
-const { getSport } = require('../controllers/sport');
-const { getRts } = require('../controllers/rts');
 
 
-router.get('/', getGenre);
-router.get('/fighting', getFighting);
-router.get('/shooter', getShooter);
-router.get('/platform', getPlatform);
-router.get('/puzzle', getPuzzle);
-router.get('/racing', getRacing);
-router.get('/role-playing-rpg', getRpg);
-router.get('/simulator', getSim);
-router.get('/sport', getSport);
-router.get('/music', getMusic);
-router.get('/rts', getRts)
+
+router.route('/').get(getGenre);
+router.route('/fighting').get(getFighting);
+router.route('/shooter').get(getShooter);
+router.route('/platform').get(getPlatform);
+router.route('/puzzle').get(getPuzzle);
+router.route('/racing').get(getRacing);
+router.route('/role-playing').get(getRpg);
+router.route('/simulator').get(getSim);
+router.route('/sport').get(getSport);
+router.route('/music').get(getMusic);
+router.route('/real').get(getRts)
 
 
 
