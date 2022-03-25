@@ -1,16 +1,30 @@
 <%- include('./partials/Header.ejs') %> 
+<a href="/catagories"><i class="fa-solid fa-circle-left"></i>
+<div class="genre-title">
+     </a> <h3>Fighting games</h3>
+
+</div>
 <div class="games-list">
-    Fighting Games
-    <ul>
-        <% games.forEach(gameData => { %> 
-            <li>
-              
-                <%= gameData.name %>
-                <%= gameData.genres %>  
-                <img src=<%=gameData.cover.url%>  alt="" />
-            </li>
-            
-            <% }) %> 
-    </ul>
+    
+
+
+    <div class="genre-games-list">
+        <ul>
+            <% if(gameData.cover.url === undefined) { %> 
+                <% return games.forEach(gameData => {  %> 
+                    <li>
+                  
+                        <%= gameData.name %>
+                        <img src=<%=gameData.cover.url%>  alt="" />
+                        
+                    </li>
+                    
+                    <% }) %> 
+                <% } %> 
+      
+                
+        </ul>
+    </div>
+   
     
 </div>
