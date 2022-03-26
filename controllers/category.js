@@ -34,7 +34,7 @@ const Categories = {
                 'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
     
             },
-            body: 'fields genres.name, name, cover.url; where genres = (7);'
+            body: 'fields name, cover.*; where genres = (7);'
         }).then(response => response.json())
         .then(data => {
           console.log(data)
@@ -53,9 +53,8 @@ const Categories = {
                 'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
     
             },
-            body: 'fields genres.name, name, cover.url; where genres = (4);'
-        }).then(response => response.json())
-        .then(data => {
+            body: 'fields name, cover.*; where genres = (4);'
+        }).then(response => response.json()).then(data => {
           console.log(data)
           res.render('fighting', {title: 'fighting', games: data})
         })
@@ -72,9 +71,8 @@ const Categories = {
                 'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
     
             },
-            body: 'fields genres.name, name, cover.url; where genres = (8);'
-        }).then(response => response.json())
-        .then(data => {
+            body: 'fields name, cover.*; where genres = (8);'
+        }).then(response => response.json()).then(data => {
           console.log(data)
           res.render('platform', {title: 'platform', games: data})
         })
@@ -90,9 +88,8 @@ const Categories = {
                 'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
     
             },
-            body: 'fields genres.name, name, cover.url; where genres = (9);'
-        }).then(response => response.json())
-        .then(data => {
+            body: 'fields name, cover.*; where genres = (9);'
+        }).then(response => response.json()).then(data => {
           console.log(data)
           res.render('puzzle', {title: 'puzzle', games: data})
         })
@@ -109,9 +106,8 @@ const Categories = {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres.name, name, cover.url; where genres = (10);'
-    }).then(response => response.json())
-    .then(data => {
+        body: 'fields name, cover.*; where genres = (10);'
+    }).then(response => response.json()).then(data => {
       console.log(data)
       res.render('racing', {title: 'racing', games: data})
     })
@@ -127,9 +123,8 @@ getRpg (req,res) {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres.name, name, cover.url; where genres = (12);'
-    }).then(response => response.json())
-    .then(data => {
+        body: 'fields name, cover.*; where genres = (12);'
+    }).then(response => response.json()).then(data => {
       console.log(data)
       res.render('rpg', {title: 'role-playing', games: data})
     })
@@ -146,9 +141,8 @@ getRts(req,res)  {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres.name, name, cover.url; where genres = (11);'
-    }).then(response => response.json())
-    .then(data => {
+        body: 'fields name, cover.*; where genres = (11);'
+    }).then(response => response.json()).then(data => {
       console.log(data)
       res.render('rts', {title: 'rts', games: data})
     })
@@ -164,9 +158,8 @@ getShooter (req,res) {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres.name, name, cover.url; where genres = (5);'
-    }).then(response => response.json())
-    .then(data => {
+        body: 'fields name, cover.*; where genres = (5);'
+    }).then(response => response.json()).then(data => {
       console.log(data)
       res.render('shooter', {title: 'shooter', games: data})
     })
@@ -182,9 +175,8 @@ getSim  (req,res)  {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres.name, name, cover.url; where genres = (13);'
-    }).then(response => response.json())
-    .then(data => {
+        body: 'fields name, cover.*; where genres = (13);'
+    }).then(response => response.json()).then(data => {
       console.log(data)
       res.render('simulator', {title: 'simulator', games: data})
     })
@@ -200,9 +192,8 @@ getSport (req,res)  {
             'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
 
         },
-        body: 'fields genres.name, name, cover.url; where genres = (14);'
-    }).then(response => response.json())
-    .then(data => {
+        body: 'fields name, cover.*; where genres = (14);'
+    }).then(response => response.json()).then(data => {
       console.log(data)
       res.render('sport', {title: 'sport', games: data})
     })
