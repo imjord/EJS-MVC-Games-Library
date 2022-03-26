@@ -20,7 +20,7 @@ const Categories = {
             body: 'fields *;'
         }).then(response => response.json())
         .then(data => {
-          console.log(data)
+     
           res.render('catagories', {title: 'catagories', category: data})
         })
         .catch(err => console.log(err.message))
@@ -56,7 +56,7 @@ const Categories = {
             },
             body: 'fields name, cover.*; where genres = (4);'
         }).then(response => response.json()).then(data => {
-          console.log(data)
+        
           res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
         })
         .catch(err => console.log(err.message))
@@ -144,15 +144,15 @@ getRts(req,res)  {
         },
         body: 'fields name, cover.*; where genres = (11);'
     }).then(response => response.json()).then(data => {
-      console.log(data)
+    
       res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
 
 
 },
-getShooter (req,res) {
-    const response =  fetch("https://api.igdb.com/v4/games", {
+ getShooter (req,res) {
+    const response =   fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
             'Client-ID': process.env.clientid,

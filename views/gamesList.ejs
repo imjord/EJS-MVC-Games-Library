@@ -15,7 +15,7 @@
                 <li>
                   
                     <%= gameData.name %>
-                    <img src=<%=gameData.cover.url%>  alt="" />
+                    <img src=<%= gameData.cover ? gameData.cover.url : '#' %>  alt="" />
                     
                 </li>
                 
