@@ -9,8 +9,10 @@
                     <div class="name-div">
                         <%= gameData.name %>
                     </div>
-                    <div class="img-div"> <img src=<%= gameData.cover ? gameData.cover.url : '#' %>  alt="No cover-found" /></div>
-                    <button>Add to library</button>
+                    <div class="img-div"> <img src=<%= gameData.cover ? gameData.cover.url : '#' %> height="200" width="400" alt="No cover-found" /></div>
+                    <div>
+                        <button>Add to library</button>
+                    </div>
                 <% }) %> 
     
 </div>
