@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+require('dotenv').config();
 
 
 
@@ -12,8 +13,8 @@ const Categories = {
         const response =  fetch("https://api.igdb.com/v4/genres", {
             method: "POST",
             headers: {
-                'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-                'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+                'Client-ID': process.env.clientid,
+                'Authorization': 'Bearer ' + process.env.auth
     
             },
             body: 'fields *;'
@@ -30,11 +31,11 @@ const Categories = {
         const response =  fetch("https://api.igdb.com/v4/games", {
             method: "POST",
             headers: {
-                'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-                'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+                'Client-ID': process.env.clientid,
+                'Authorization': 'Bearer ' + process.env.auth
     
             },
-            body: 'fields name, cover.*; where genres = (7);'
+            body: 'fields name, cover.url; where genres = (7);'
         }).then(response => response.json())
         .then(data => {
           console.log(data)
@@ -49,8 +50,8 @@ const Categories = {
         const response =  fetch("https://api.igdb.com/v4/games", {
             method: "POST",
             headers: {
-                'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-                'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+                'Client-ID': process.env.clientid,
+                'Authorization': 'Bearer ' + process.env.auth
     
             },
             body: 'fields name, cover.*; where genres = (4);'
@@ -67,8 +68,8 @@ const Categories = {
         const response =   fetch("https://api.igdb.com/v4/games", {
             method: "POST",
             headers: {
-                'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-                'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+                'Client-ID': process.env.clientid,
+                'Authorization': 'Bearer ' + process.env.auth
     
             },
             body: 'fields name, cover.*; where genres = (8);'
@@ -84,8 +85,8 @@ const Categories = {
         const response =  fetch("https://api.igdb.com/v4/games", {
             method: "POST",
             headers: {
-                'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-                'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+                'Client-ID': process.env.clientid,
+                'Authorization': 'Bearer ' + process.env.auth
     
             },
             body: 'fields name, cover.*; where genres = (9);'
@@ -102,8 +103,8 @@ const Categories = {
     const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
-            'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-            'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+            'Client-ID': process.env.clientid,
+            'Authorization': 'Bearer ' + process.env.auth
 
         },
         body: 'fields name, cover.*; where genres = (10);'
@@ -119,8 +120,8 @@ getRpg (req,res) {
     const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
-            'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-            'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+            'Client-ID': process.env.clientid,
+            'Authorization': 'Bearer ' + process.env.auth
 
         },
         body: 'fields name, cover.*; where genres = (12);'
@@ -137,8 +138,8 @@ getRts(req,res)  {
     const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
-            'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-            'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+            'Client-ID': process.env.clientid,
+            'Authorization': 'Bearer ' + process.env.auth
 
         },
         body: 'fields name, cover.*; where genres = (11);'
@@ -154,8 +155,8 @@ getShooter (req,res) {
     const response =   fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
-            'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-            'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+            'Client-ID': process.env.clientid,
+            'Authorization': 'Bearer ' + process.env.auth
 
         },
         body: 'fields name, cover.*; where genres = (5);'
@@ -171,8 +172,8 @@ getSim  (req,res)  {
     const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
-            'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-            'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+            'Client-ID': process.env.clientid,
+            'Authorization': 'Bearer ' + process.env.auth
 
         },
         body: 'fields name, cover.*; where genres = (13);'
@@ -188,8 +189,8 @@ getSport (req,res)  {
     const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
-            'Client-ID': "dt0iidovqqqnrmznzpb0splfdunfzz",
-            'Authorization': 'Bearer ' + "fu12c9uy63hfhecv1h5ghtzo7lb6gr"
+            'Client-ID': process.env.clientid,
+            'Authorization': 'Bearer ' + process.env.auth
 
         },
         body: 'fields name, cover.*; where genres = (14);'

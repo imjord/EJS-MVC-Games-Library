@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {
-    getGenre, getFighting,
-    getMusic,
+    getGenre,getMusic, getFighting,
+    
     getPlatform, getPuzzle, getRacing, getRpg, getSport, getRts, getSim, getShooter
 } = require('../controllers/category');
 
@@ -10,8 +10,9 @@ const {
 
 
 router.route('/').get(getGenre);
-router.route('/fighting').get(getFighting);
 router.route('/shooter').get(getShooter);
+router.route('/fighting').get(getFighting);
+
 router.route('/platform').get(getPlatform);
 router.route('/puzzle').get(getPuzzle);
 router.route('/racing').get(getRacing);
