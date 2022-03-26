@@ -5,23 +5,12 @@
 
 </div>
 <div class="games-list">
-    
-    
-
-
-    <div class="genre-games-list">
-        <ul>
             <% games.forEach(gameData => { %> 
-                <li>
-                  
-                    <%= gameData.name %>
-                    <img src=<%= gameData.cover ? gameData.cover.url : '#' %>  alt="" />
-                    
-                </li>
-                
+                    <div class="name-div">
+                        <%= gameData.name %>
+                    </div>
+                    <div class="img-div"> <img src=<%= gameData.cover ? gameData.cover.url : '#' %>  alt="No cover-found" /></div>
+                    <button>Add to library</button>
                 <% }) %> 
-        </ul>
-    </div>
-   
     
 </div>
