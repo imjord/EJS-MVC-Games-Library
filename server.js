@@ -5,21 +5,27 @@ const db = require('./config/connection');
 require('dotenv').config();
 
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 // routes
 const homeRoute = require('./routes/homeRoute');
 const libraryRoute = require('./routes/LibraryRoute');
 const catagoryRoute = require('./routes/catagoryRoute');
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+
+app.use('/catagories', catagoryRoute);
+app.use('/', homeRoute);
+
+app.use('/library', libraryRoute);
+
 
 // set view engine 
 app.set('view engine', "ejs");
 app.use(express.static('./public'));
 
-app.use('/', homeRoute);
-app.use('/library', libraryRoute);
-app.use('/catagories', catagoryRoute);
+
+
+
 
 
 db.once('open', () => {

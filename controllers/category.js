@@ -39,7 +39,7 @@ const Categories = {
         }).then(response => response.json())
         .then(data => {
           console.log(data)
-          res.render('fighting', {title: 'fighting', games: data})
+          res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
         })
         .catch(err => console.log(err.message))
     
@@ -57,7 +57,7 @@ const Categories = {
             body: 'fields name, cover.*; where genres = (4);'
         }).then(response => response.json()).then(data => {
           console.log(data)
-          res.render('fighting', {title: 'fighting', games: data})
+          res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
         })
         .catch(err => console.log(err.message))
     
@@ -75,7 +75,7 @@ const Categories = {
             body: 'fields name, cover.*; where genres = (8);'
         }).then(response => response.json()).then(data => {
           console.log(data)
-          res.render('platform', {title: 'platform', games: data})
+          res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
         })
         .catch(err => console.log(err.message))
     
@@ -92,7 +92,7 @@ const Categories = {
             body: 'fields name, cover.*; where genres = (9);'
         }).then(response => response.json()).then(data => {
           console.log(data)
-          res.render('puzzle', {title: 'puzzle', games: data})
+          res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
         })
         .catch(err => console.log(err.message))
     
@@ -110,7 +110,7 @@ const Categories = {
         body: 'fields name, cover.*; where genres = (10);'
     }).then(response => response.json()).then(data => {
       console.log(data)
-      res.render('racing', {title: 'racing', games: data})
+      res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
 
@@ -127,7 +127,7 @@ getRpg (req,res) {
         body: 'fields name, cover.*; where genres = (12);'
     }).then(response => response.json()).then(data => {
       console.log(data)
-      res.render('rpg', {title: 'role-playing', games: data})
+      res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
 
@@ -145,14 +145,14 @@ getRts(req,res)  {
         body: 'fields name, cover.*; where genres = (11);'
     }).then(response => response.json()).then(data => {
       console.log(data)
-      res.render('rts', {title: 'rts', games: data})
+      res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
 
 
 },
 getShooter (req,res) {
-    const response =   fetch("https://api.igdb.com/v4/games", {
+    const response =  fetch("https://api.igdb.com/v4/games", {
         method: "POST",
         headers: {
             'Client-ID': process.env.clientid,
@@ -162,10 +162,9 @@ getShooter (req,res) {
         body: 'fields name, cover.*; where genres = (5);'
     }).then(response => response.json()).then(data => {
       console.log(data)
-      res.render('shooter', {title: 'shooter', games: data})
+      res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
-
 
 },
 getSim  (req,res)  {
@@ -179,7 +178,7 @@ getSim  (req,res)  {
         body: 'fields name, cover.*; where genres = (13);'
     }).then(response => response.json()).then(data => {
       console.log(data)
-      res.render('simulator', {title: 'simulator', games: data})
+      res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
 
@@ -196,7 +195,7 @@ getSport (req,res)  {
         body: 'fields name, cover.*; where genres = (14);'
     }).then(response => response.json()).then(data => {
       console.log(data)
-      res.render('sport', {title: 'sport', games: data})
+      res.render('gamesList', {title: 'Music', genreName: 'Music Games', games: data})
     })
     .catch(err => console.log(err.message))
 
