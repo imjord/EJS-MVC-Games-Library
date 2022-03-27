@@ -28,10 +28,14 @@ app.use(express.static('./public'));
 
 
 
-
-db.once('open', () => {
-    console.log('database live')
-    app.listen(PORT, () =>{
-        console.log(`server now live ${PORT}`)
-    })
+app.listen(PORT, () =>{
+    console.log(`server now live on ${PORT}`)
 })
+
+
+// db.once('open', () => {
+//     console.log('database live')
+//     app.listen(PORT, () =>{
+//         console.log(`server now live ${PORT}`)
+//     })
+// })

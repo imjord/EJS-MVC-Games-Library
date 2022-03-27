@@ -11,8 +11,14 @@
                     </div>
                     <div class="img-div"> <img src=<%= gameData.cover ? gameData.cover.url : '#' %> height="200" width="300" alt="Game Cover" /></div>
                     <div>
-                        <button>Add to library</button>
+                        <button id="my-btn">Add to library</button>
                     </div>
                 <% }) %> 
     
 </div>
+
+<script>var button = document.getElementById('my-btn');
+    button.addEventListener('click', () => {
+        alert('not working yet')
+    })  </script>
+
