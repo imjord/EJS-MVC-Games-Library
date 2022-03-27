@@ -11,11 +11,12 @@ app.use(express.urlencoded({extended: true}));
 const homeRoute = require('./routes/homeRoute');
 const libraryRoute = require('./routes/LibraryRoute');
 const catagoryRoute = require('./routes/catagoryRoute');
+const trendingRoute = require('./routes/trendingRoute');
 
 
 app.use('/catagories', catagoryRoute);
 app.use('/', homeRoute);
-
+app.use('/trending', trendingRoute);
 app.use('/library', libraryRoute);
 
 
