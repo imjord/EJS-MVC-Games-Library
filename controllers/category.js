@@ -35,7 +35,7 @@ const Categories = {
                 'Authorization': 'Bearer ' + process.env.auth
     
             },
-            body: 'fields name, cover.url; where genres = (7);'
+            body: 'fields name, cover.url; where genres = (7); limit 20;'
         }).then(response => response.json())
         .then(data => {
           
@@ -54,7 +54,7 @@ const Categories = {
                 'Authorization': 'Bearer ' + process.env.auth
     
             },
-            body: 'fields name, cover.*; where genres = (4);'
+            body: 'fields name, cover.*; where genres = (4); limit 20;'
         }).then(response => response.json()).then(data => {
         
           res.render('gamesList', {title: 'Fighting', genreName: 'Fighting Games', games: data})
@@ -72,7 +72,7 @@ const Categories = {
                 'Authorization': 'Bearer ' + process.env.auth
     
             },
-            body: 'fields name, cover.*; where genres = (8);'
+            body: 'fields name, cover.*; where genres = (8); limit 20;'
         }).then(response => response.json()).then(data => {
           
           res.render('gamesList', {title: 'Platform', genreName: 'Platform Games', games: data})
@@ -89,7 +89,7 @@ const Categories = {
                 'Authorization': 'Bearer ' + process.env.auth
     
             },
-            body: 'fields name, cover.*; where genres = (9);'
+            body: 'fields name, cover.*; where genres = (9); limit 20;'
         }).then(response => response.json()).then(data => {
           
           res.render('gamesList', {title: 'Puzzle', genreName: 'Puzzle Games', games: data})
@@ -107,7 +107,7 @@ const Categories = {
             'Authorization': 'Bearer ' + process.env.auth
 
         },
-        body: 'fields name, cover.*; where genres = (10);'
+        body: 'fields name, cover.*; where genres = (10); limit 20;'
     }).then(response => response.json()).then(data => {
       
       res.render('gamesList', {title: 'Racing', genreName: 'Racing Games', games: data})
@@ -124,7 +124,7 @@ getRpg (req,res) {
             'Authorization': 'Bearer ' + process.env.auth
 
         },
-        body: 'fields name, cover.*; where genres = (12);'
+        body: 'fields name, cover.*; where genres = (12); limit 20;'
     }).then(response => response.json()).then(data => {
       
       res.render('gamesList', {title: 'Rpg', genreName: 'Rpg Games', games: data})
@@ -142,7 +142,7 @@ getRts(req,res)  {
             'Authorization': 'Bearer ' + process.env.auth
 
         },
-        body: 'fields name, cover.*; where genres = (11);'
+        body: 'fields name, cover.*; where genres = (11); limit 20;'
     }).then(response => response.json()).then(data => {
     
       res.render('gamesList', {title: 'Real-Time-Stradegy', genreName: 'Real-Time-Stradegy Games', games: data})
@@ -159,7 +159,7 @@ getRts(req,res)  {
             'Authorization': 'Bearer ' + process.env.auth
 
         },
-        body: 'fields name, cover.*; where genres = (5);'
+        body: 'fields name, cover.*; where genres = (5); limit 20;'
     }).then(response => response.json()).then(data => {
       
       res.render('gamesList', {title: 'Shooter', genreName: 'Shooter Games', games: data})
@@ -175,7 +175,7 @@ getSim  (req,res)  {
             'Authorization': 'Bearer ' + process.env.auth
 
         },
-        body: 'fields name, cover.*; where genres = (13);'
+        body: 'fields name, cover.*; where genres = (13); limit 20;'
     }).then(response => response.json()).then(data => {
       
       res.render('gamesList', {title: 'Simulator', genreName: 'Simulator Games', games: data})
@@ -192,7 +192,7 @@ getSport (req,res)  {
             'Authorization': 'Bearer ' + process.env.auth
 
         },
-        body: 'fields name, cover.*; where genres = (14);'
+        body: 'fields name, cover.*; where genres = (14); limit 20;'
     }).then(response => response.json()).then(data => {
       
       res.render('gamesList', {title: 'Sport', genreName: 'Sport Games', games: data})
